@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF8FD"/>
+      <stop offset="1" stop-color="#CDEFFA"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#45C5E8"/>
+      <stop offset="0.45" stop-color="#0798D5"/>
+      <stop offset="1" stop-color="#0756A5"/>
+    </linearGradient>
+    <linearGradient id="float" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E08A0A"/>
+      <stop offset="0.35" stop-color="#FFBB4D"/>
+      <stop offset="0.7" stop-color="#FFAA24"/>
+      <stop offset="1" stop-color="#B86C08"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#D7E2EE"/>
+      <stop offset="0.5" stop-color="#F5F8FC"/>
+      <stop offset="1" stop-color="#B5C8DB"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8DA7C2"/>
+      <stop offset="0.5" stop-color="#EBF1F8"/>
+      <stop offset="1" stop-color="#6687A8"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A3D5F"/>
+      <stop offset="1" stop-color="#071A2E"/>
+    </linearGradient>
+    <pattern id="cells" width="22" height="16" patternUnits="userSpaceOnUse">
+      <rect width="22" height="16" fill="none" stroke="#4A8DD6" stroke-width="0.8" opacity="0.7"/>
+    </pattern>
+    <pattern id="holes" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="7" cy="7" r="2.4" fill="#0A3A6E" opacity="0.55"/>
+    </pattern>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7">
+      <circle cx="5" cy="5" r="4" fill="#0F2D4A"/>
+    </marker>
+    <style>
+      .t  { fill:#0F2D4A; font-size:15px; }
+      .tb { fill:#0F2D4A; font-size:15px; font-weight:700; }
+      .ts { fill:#456C91; font-size:12.5px; }
+      .tw { fill:#FFFFFF; font-size:13px; font-weight:600; }
+      .lead { stroke:#0F2D4A; stroke-width:1.2; fill:none; marker-end:url(#dot); }
+      .num { fill:#F04435; }
+      .numt { fill:#fff; font-size:12px; font-weight:700; text-anchor:middle; }
+    </style>
+  </defs>
+
+  <!-- ===== Latar ===== -->
+  <rect width="1400" height="520" fill="url(#sky)"/>
+  <rect y="520" width="1400" height="480" fill="url(#sea)"/>
+  <!-- Daratan / pantai -->
+  <path d="M1010 520 L1060 470 L1400 455 L1400 1000 L1180 1000 C1150 860 1100 700 1010 520 Z" fill="#E9D8B4"/>
+  <path d="M1060 470 L1400 455 L1400 478 L1052 492 Z" fill="#C9B184"/>
+  <!-- Gelombang permukaan -->
+  <path d="M0 520 q25 -10 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t30 0"
+        fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.8"/>
+  <!-- Dasar laut & karang -->
+  <path d="M0 935 C150 915 300 945 450 930 C600 915 800 948 1000 930 L1180 1000 L0 1000 Z" fill="#0A3A6E"/>
+  <g opacity="0.95">
+    <path d="M340 935 c-8 -30 -2 -55 10 -70 c4 18 6 30 2 42 c10 -20 22 -30 34 -34 c-6 20 -16 40 -30 62 z" fill="#F4695D"/>
+    <path d="M400 935 c4 -20 16 -34 30 -40 c-2 14 -8 26 -16 40 z" fill="#FFBB4D"/>
+    <circle cx="200" cy="925" r="22" fill="#F99A91"/>
+    <circle cx="232" cy="932" r="14" fill="#FCC4BE"/>
+    <path d="M90 940 c0 -40 10 -60 18 -70 m-18 70 c-10 -30 -24 -40 -34 -44 m34 44 c10 -24 26 -32 38 -34" stroke="#F04435" stroke-width="5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== Judul ===== -->
+  <text x="40" y="48" fill="#0756A5" font-size="26" font-weight="800">SEGARA · Prototipe Pelampung Node 10</text>
+  <text x="40" y="74" class="ts" font-size="14">Ilustrasi konsep rancangan (draft), bukan foto produk jadi · skala tidak proporsional · tampilan potong (cutaway)</text>
+
+  <!-- ===== Gelombang radio LoRa ===== -->
+  <g fill="none" stroke="#F04435" stroke-width="2.5" stroke-linecap="round">
+    <path d="M520 112 q14 18 0 36" opacity="0.9"/>
+    <path d="M538 98 q26 32 0 64" opacity="0.65"/>
+    <path d="M556 84 q38 46 0 92" opacity="0.4"/>
+    <path d="M1150 248 q-14 18 0 36" opacity="0.9"/>
+    <path d="M1132 234 q-26 32 0 64" opacity="0.65"/>
+  </g>
+  <path d="M600 140 C780 110 960 150 1110 250" fill="none" stroke="#F04435" stroke-width="2" stroke-dasharray="8 7"/>
+  <rect x="705" y="96" width="290" height="50" rx="10" fill="#FFFFFF" stroke="#FCC4BE"/>
+  <text x="850" y="117" text-anchor="middle" class="tb" fill="#B3261C">LoRa P2P · 922 MHz · SF9</text>
+  <text x="850" y="136" text-anchor="middle" class="ts">12 byte setiap 6 jam · airtime ≈ 144 ms</text>
+
+  <!-- ===== PELAMPUNG ===== -->
+  <!-- Antena -->
+  <line x1="480" y1="100" x2="480" y2="168" stroke="#0F2D4A" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="480" cy="98" r="7" fill="#F04435"/>
+  <!-- Tiang -->
+  <rect x="472" y="166" width="16" height="170" fill="url(#steel)" stroke="#456C91"/>
+  <!-- Panel surya (miring) -->
+  <g>
+    <path d="M362 238 L598 210 L612 262 L376 292 Z" fill="url(#panel)" stroke="#071A2E" stroke-width="2"/>
+    <path d="M362 238 L598 210 L612 262 L376 292 Z" fill="url(#cells)"/>
+    <path d="M376 292 L612 262 L612 270 L377 300 Z" fill="#456C91"/>
+    <rect x="470" y="276" width="20" height="16" fill="#6687A8"/>
+  </g>
+
+  <!-- Kotak elektronik IP68 (cutaway) -->
+  <rect x="370" y="330" width="220" height="150" rx="10" fill="url(#box)" stroke="#456C91" stroke-width="2.5"/>
+  <rect x="384" y="344" width="192" height="122" rx="6" fill="#FFFFFF" stroke="#B5C8DB" stroke-dasharray="4 3"/>
+  <!-- Baterai 18650 -->
+  <rect x="396" y="428" width="96" height="26" rx="12" fill="#12B07A" stroke="#0C7A55"/>
+  <rect x="490" y="436" width="7" height="10" rx="2" fill="#8DA7C2"/>
+  <text x="444" y="446" text-anchor="middle" class="tw" font-size="11">18650</text>
+  <!-- PCB ESP32 -->
+  <rect x="396" y="354" width="98" height="62" rx="4" fill="#0756A5" stroke="#063F7A"/>
+  <rect x="410" y="362" width="46" height="34" rx="2" fill="#B5C8DB"/>
+  <rect x="414" y="366" width="38" height="26" rx="2" fill="#EBF1F8"/>
+  <text x="433" y="383" text-anchor="middle" fill="#0F2D4A" font-size="9" font-weight="700">ESP32</text>
+  <g fill="#FFCF7A"><rect x="400" y="405" width="4" height="7"/><rect x="408" y="405" width="4" height="7"/><rect x="416" y="405" width="4" height="7"/><rect x="424" y="405" width="4" height="7"/><rect x="432" y="405" width="4" height="7"/><rect x="440" y="405" width="4" height="7"/><rect x="448" y="405" width="4" height="7"/></g>
+  <rect x="464" y="366" width="22" height="16" rx="2" fill="#1A3D5F"/>
+  <!-- RFM95W -->
+  <rect x="506" y="354" width="58" height="42" rx="3" fill="#1287B0" stroke="#126B8C"/>
+  <rect x="516" y="362" width="38" height="26" rx="2" fill="#D3F3FB"/>
+  <text x="535" y="379" text-anchor="middle" fill="#0F2D4A" font-size="8.5" font-weight="700">SX1276</text>
+  <!-- Charger surya -->
+  <rect x="506" y="404" width="58" height="22" rx="3" fill="#B3261C"/>
+  <text x="535" y="419" text-anchor="middle" class="tw" font-size="9.5">CN3791</text>
+  <!-- Silica gel -->
+  <rect x="506" y="432" width="58" height="22" rx="4" fill="#FFF0D4" stroke="#FFCF7A"/>
+  <text x="535" y="447" text-anchor="middle" fill="#8F540A" font-size="9.5">silica gel</text>
+  <!-- Kabel internal -->
+  <path d="M480 336 L480 350 M494 385 L506 385 M444 416 L444 428 M535 396 L535 404" stroke="#F04435" stroke-width="2" fill="none"/>
+
+  <!-- Badan pelampung -->
+  <path d="M300 482 L660 482 L640 580 C600 600 360 600 320 580 Z" fill="url(#float)" stroke="#8F540A" stroke-width="2"/>
+  <ellipse cx="480" cy="482" rx="180" ry="18" fill="#FFCF7A" stroke="#8F540A" stroke-width="2"/>
+  <rect x="380" y="510" width="200" height="34" rx="6" fill="#0F2D4A" opacity="0.88"/>
+  <text x="480" y="533" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="800" letter-spacing="2">SEGARA · 10</text>
+  <!-- Garis air depan pelampung -->
+  <path d="M300 540 q20 -8 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.85"/>
+  <!-- Cable gland -->
+  <rect x="470" y="590" width="20" height="16" rx="3" fill="#2A5277"/>
+
+  <!-- Kabel sensor + pipa pelindung -->
+  <line x1="480" y1="606" x2="480" y2="760" stroke="#071A2E" stroke-width="3"/>
+  <rect x="462" y="730" width="36" height="120" rx="6" fill="#EBF1F8" opacity="0.95" stroke="#8DA7C2" stroke-width="1.5"/>
+  <rect x="462" y="730" width="36" height="120" rx="6" fill="url(#holes)"/>
+  <!-- Probe DS18B20 -->
+  <line x1="480" y1="740" x2="480" y2="782" stroke="#071A2E" stroke-width="3"/>
+  <rect x="473" y="782" width="14" height="44" rx="7" fill="url(#steel)" stroke="#456C91"/>
+  <!-- Calon sensor fase 4 (putus-putus) -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="5 4" opacity="0.9">
+    <rect x="540" y="740" width="18" height="74" rx="9"/>
+    <rect x="570" y="740" width="18" height="74" rx="9"/>
+    <path d="M488 606 C520 640 548 680 549 740 M492 606 C540 640 578 680 579 740"/>
+  </g>
+
+  <!-- Tali tambat & pemberat -->
+  <path d="M620 580 C650 700 690 820 700 900" fill="none" stroke="#FFE1AA" stroke-width="3" stroke-dasharray="10 4"/>
+  <rect x="668" y="898" width="66" height="36" rx="4" fill="#8DA7C2" stroke="#456C91" stroke-width="2"/>
+  <text x="701" y="921" text-anchor="middle" fill="#0F2D4A" font-size="11" font-weight="700">beton</text>
+
+  <!-- ===== Label pelampung (kiri) ===== -->
+  <g>
+    <circle cx="52" cy="128" r="11" class="num"/><text x="52" y="132" class="numt">1</text>
+    <text x="72" y="126" class="tb">Antena 1/4 λ</text>
+    <text x="72" y="144" class="ts">whip 922 MHz, ±8 cm</text>
+    <path class="lead" d="M200 132 L470 118"/>
+
+    <circle cx="52" cy="212" r="11" class="num"/><text x="52" y="216" class="numt">2</text>
+    <text x="72" y="210" class="tb">Panel surya 6 V · 2 W</text>
+    <text x="72" y="228" class="ts">miring ±15° ke utara/selatan</text>
+    <path class="lead" d="M268 216 L392 248"/>
+
+    <circle cx="52" cy="352" r="11" class="num"/><text x="52" y="356" class="numt">3</text>
+    <text x="72" y="350" class="tb">Kotak elektronik IP68</text>
+    <text x="72" y="368" class="ts">ESP32 · RFM95W (SX1276)</text>
+    <text x="72" y="385" class="ts">charger CN3791 · silica gel</text>
+    <path class="lead" d="M262 362 L398 380"/>
+
+    <circle cx="52" cy="450" r="11" class="num"/><text x="52" y="454" class="numt">4</text>
+    <text x="72" y="448" class="tb">Baterai Li-ion 18650</text>
+    <text x="72" y="466" class="ts">3000 mAh · deep sleep ±10 µA</text>
+    <path class="lead" d="M290 452 L402 442"/>
+
+    <circle cx="52" cy="600" r="11" class="num"/><text x="52" y="604" class="numt">5</text>
+    <text x="72" y="598" class="fill-white" fill="#FFFFFF" font-size="15" font-weight="700">Pelampung PVC / float</text>
+    <text x="72" y="616" fill="#EAF8FD" font-size="12.5">cat oranye, mudah terlihat kapal</text>
+    <path d="M262 604 L322 572" stroke="#FFFFFF" stroke-width="1.2" fill="none"/>
+
+    <circle cx="52" cy="700" r="11" class="num"/><text x="52" y="704" class="numt">6</text>
+    <text x="72" y="698" fill="#FFFFFF" font-size="15" font-weight="700">Cable gland PG7</text>
+    <text x="72" y="716" fill="#EAF8FD" font-size="12.5">jalur kabel sensor, kedap air</text>
+    <path d="M232 702 L470 600" stroke="#FFFFFF" stroke-width="1.2" fill="none"/>
+
+    <circle cx="52" cy="800" r="11" class="num"/><text x="52" y="804" class="numt">7</text>
+    <text x="72" y="798" fill="#FFFFFF" font-size="15" font-weight="700">Sensor suhu DS18B20</text>
+    <text x="72" y="816" fill="#EAF8FD" font-size="12.5">dalam pipa berlubang, kedalaman ±1 m</text>
+    <path d="M300 804 L472 804" stroke="#FFFFFF" stroke-width="1.2" fill="none"/>
+  </g>
+
+  <!-- Label kanan bawah pelampung -->
+  <g>
+    <circle cx="530" cy="872" r="11" class="num"/><text x="530" y="876" class="numt">8</text>
+    <text x="548" y="870" fill="#FFFFFF" font-size="15" font-weight="700">Fase 4 (opsional)</text>
+    <text x="548" y="888" fill="#EAF8FD" font-size="12.5">probe pH &amp; EC</text>
+    <circle cx="764" cy="880" r="11" class="num"/><text x="764" y="884" class="numt">9</text>
+    <text x="782" y="878" fill="#FFFFFF" font-size="15" font-weight="700">Tali tambat + pemberat</text>
+    <text x="782" y="896" fill="#EAF8FD" font-size="12.5">di pasir, jauh dari koloni karang</text>
+  </g>
+
+  <!-- ===== STASIUN DARAT ===== -->
+  <!-- Tiang gateway -->
+  <rect x="1176" y="250" width="10" height="215" fill="url(#steel)" stroke="#456C91"/>
+  <line x1="1181" y1="196" x2="1181" y2="252" stroke="#0F2D4A" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="1181" cy="194" r="6" fill="#F04435"/>
+  <rect x="1132" y="290" width="98" height="66" rx="8" fill="url(#box)" stroke="#456C91" stroke-width="2"/>
+  <rect x="1144" y="300" width="74" height="44" rx="3" fill="#1A3D5F"/>
+  <rect x="1152" y="307" width="34" height="18" rx="2" fill="#45C5E8"/>
+  <text x="1181" y="338" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="700">TTGO LoRa32</text>
+  <!-- Bangunan / pos -->
+  <path d="M1250 380 L1320 340 L1390 380 Z" fill="#B3261C"/>
+  <rect x="1262" y="380" width="116" height="80" fill="#F5F8FC" stroke="#8DA7C2" stroke-width="2"/>
+  <rect x="1282" y="398" width="76" height="46" rx="3" fill="#0F2D4A"/>
+  <rect x="1287" y="403" width="66" height="33" rx="2" fill="#0756A5"/>
+  <polyline points="1291,428 1305,420 1316,424 1330,412 1348,416" fill="none" stroke="#FFAA24" stroke-width="2"/>
+  <!-- Wi-Fi -->
+  <g fill="none" stroke="#0756A5" stroke-width="2.5" stroke-linecap="round">
+    <path d="M1232 306 q14 -12 28 0"/>
+    <path d="M1226 298 q20 -18 40 0"/>
+  </g>
+
+  <g>
+    <circle cx="942" cy="400" r="11" class="num"/><text x="942" y="404" class="numt">10</text>
+    <text x="960" y="398" class="tb">Gateway LoRa → Wi-Fi</text>
+    <text x="960" y="416" class="ts">TTGO LoRa32 · adaptor 5 V</text>
+    <path class="lead" d="M1124 384 L1140 350"/>
+
+    <circle cx="1180" cy="506" r="11" class="num"/><text x="1180" y="510" class="numt">11</text>
+    <text x="1198" y="512" class="tb">Mosquitto + SEGARA</text>
+    <text x="1198" y="530" class="ts">segara/telemetry/10</text>
+    <text x="1198" y="547" class="ts">→ QC → DHW → dashboard</text>
+  </g>
+
+  <!-- ===== Kartu spesifikasi ===== -->
+  <g>
+    <rect x="860" y="600" width="300" height="196" rx="12" fill="#FFFFFF" opacity="0.94"/>
+    <text x="880" y="630" class="tb" fill="#0756A5" font-size="16">Spesifikasi draft</text>
+        <text x="880" y="656" class="ts" font-size="13.5">Data</text>
+    <text x="960" y="656" class="t" font-size="13.5">suhu (fase 1); pH, salinitas,</text>
+    <text x="960" y="674" class="t" font-size="13.5">kekeruhan (fase 4)</text>
+    <text x="880" y="698" class="ts" font-size="13.5">Siklus</text>
+    <text x="960" y="698" class="t" font-size="13.5">ukur &amp; kirim tiap 6 jam</text>
+    <text x="880" y="722" class="ts" font-size="13.5">Payload</text>
+    <text x="960" y="722" class="t" font-size="13.5">12 byte biner, big-endian</text>
+    <text x="880" y="746" class="ts" font-size="13.5">Energi</text>
+    <text x="960" y="746" class="t" font-size="13.5">≈ 0,5–1,3 mAh/hari (teoretis)</text>
+    <text x="880" y="770" class="ts" font-size="13.5">Biaya</text>
+    <text x="960" y="770" class="t" font-size="13.5">±Rp0,7–1,2 juta (fase 1)</text>
+  </g>
+</svg>
