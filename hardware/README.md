@@ -11,6 +11,10 @@ dashboard yang ada langsung bekerja.
 
 ---
 
+![Ilustrasi konsep prototipe pelampung SEGARA node 10 dan gateway darat](docs/prototipe-pelampung.png)
+
+*Ilustrasi konsep (bukan foto), sumber vektor: [docs/prototipe-pelampung.svg](docs/prototipe-pelampung.svg).*
+
 ## 1. Arsitektur
 
 ```mermaid
