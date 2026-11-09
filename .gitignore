@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Database lokal & cadangan (data simulasi, dibuat ulang otomatis)
+*.db
+*.db-wal
+*.db-shm
+backup/
+
+# Dashboard
+dashboard/node_modules/
+dashboard/dist/
+
+# Rahasia
+.env
+.env.*
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
