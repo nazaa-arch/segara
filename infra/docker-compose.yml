@@ -1,0 +1,63 @@
+# Jalankan dari folder infra/:  docker compose up --build
+# Catatan: berkas ini BELUM PERNAH dijalankan (Docker tidak tersedia di mesin pengembang).
+# Kata sandi DB dapat diganti lewat variabel lingkungan SEGARA_DB_PASSWORD.
+
+services:
+  # 1. Broker Pesan MQTT
+  # Catatan: API saat ini memakai event bus in-process; broker ini disiapkan untuk
+  # integrasi pelampung fisik dan belum dihubungkan oleh kode API.
+  mosquitto:
+    image: eclipse-mosquitto:2.0
+    container_name: segara-mosquitto
+    ports:
+      - "1883:1883"
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+    restart: unless-stopped
+
+  # 2. Database TimescaleDB / PostgreSQL
+  database:
+    image: timescale/timescaledb:latest-pg16
+    container_name: segara-timescaledb
+    environment:
+      POSTGRES_DB: segara_coral
+      POSTGRES_USER: segara
+      POSTGRES_PASSWORD: ${SEGARA_DB_PASSWORD:-segara_secret_password}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - timescale_data:/var/lib/postgresql/data
+      - ./init-timescaledb.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U segara -d segara_coral"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  # 3. Backend API FastAPI + dashboard React (di-build di dalam image)
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    container_name: segara-api
+    ports:
+      - "8000:8000"
+    environment:
+      - SEGARA_DATABASE_URL=postgresql://segara:${SEGARA_DB_PASSWORD:-segara_secret_password}@database:5432/segara_coral
+      # Opsional: notifikasi Telegram
+      - SEGARA_TELEGRAM_TOKEN=${SEGARA_TELEGRAM_TOKEN:-}
+      - SEGARA_TELEGRAM_CHAT_ID=${SEGARA_TELEGRAM_CHAT_ID:-}
+    depends_on:
+      database:
+        condition: service_healthy
+      mosquitto:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  mosquitto_data:
+  mosquitto_log:
+  timescale_data:

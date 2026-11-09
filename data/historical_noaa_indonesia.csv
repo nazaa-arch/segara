@@ -1,0 +1,41 @@
+# Data Historis Suhu Permukaan Laut (SST) & Indikator NOAA Coral Reef Watch (CRW)
+# Lokasi: 5 Kawasan Terumbu Karang Utama Indonesia
+# Periode: Rekonstruksi Siklus Gelombang Panas Laut (Marine Heatwave) 120 Hari
+date,node_id,station_name,sst,mmm,hotspot,dhw_official,bleaching_alert
+2026-06-01,1,Stasiun Bunaken Reef,28.80,29.20,0.00,0.00,No Stress
+2026-06-05,1,Stasiun Bunaken Reef,29.10,29.20,0.00,0.00,No Stress
+2026-06-10,1,Stasiun Bunaken Reef,29.35,29.20,0.15,0.00,Bleaching Watch
+2026-06-15,1,Stasiun Bunaken Reef,29.60,29.20,0.40,0.00,Bleaching Watch
+2026-06-20,1,Stasiun Bunaken Reef,30.25,29.20,1.05,0.15,Bleaching Warning
+2026-06-25,1,Stasiun Bunaken Reef,30.50,29.20,1.30,1.08,Bleaching Warning
+2026-07-01,1,Stasiun Bunaken Reef,30.75,29.20,1.55,2.18,Bleaching Warning
+2026-07-08,1,Stasiun Bunaken Reef,31.10,29.20,1.90,4.08,Alert Level 1
+2026-07-15,1,Stasiun Bunaken Reef,31.35,29.20,2.15,6.23,Alert Level 1
+2026-07-22,1,Stasiun Bunaken Reef,31.50,29.20,2.30,8.53,Alert Level 2
+2026-07-29,1,Stasiun Bunaken Reef,31.40,29.20,2.20,10.73,Alert Level 2
+2026-08-05,1,Stasiun Bunaken Reef,30.90,29.20,1.70,12.43,Alert Level 2
+2026-08-12,1,Stasiun Bunaken Reef,30.10,29.20,0.90,12.43,Alert Level 2
+2026-08-19,1,Stasiun Bunaken Reef,29.40,29.20,0.20,12.43,Alert Level 2
+2026-08-26,1,Stasiun Bunaken Reef,28.90,29.20,0.00,10.25,Alert Level 2
+2026-09-02,1,Stasiun Bunaken Reef,28.70,29.20,0.00,8.07,Alert Level 2
+2026-09-10,1,Stasiun Bunaken Reef,28.60,29.20,0.00,3.99,No Stress
+2026-06-01,2,Stasiun Raja Ampat Kri,29.10,29.50,0.00,0.00,No Stress
+2026-06-15,2,Stasiun Raja Ampat Kri,29.70,29.50,0.20,0.00,Bleaching Watch
+2026-07-01,2,Stasiun Raja Ampat Kri,30.60,29.50,1.10,0.16,Bleaching Warning
+2026-07-15,2,Stasiun Raja Ampat Kri,31.20,29.50,1.70,3.56,Bleaching Warning
+2026-07-25,2,Stasiun Raja Ampat Kri,31.50,29.50,2.00,5.56,Alert Level 1
+2026-08-10,2,Stasiun Raja Ampat Kri,31.60,29.50,2.10,8.56,Alert Level 2
+2026-08-25,2,Stasiun Raja Ampat Kri,29.80,29.50,0.30,8.56,Alert Level 2
+2026-06-01,3,Stasiun Wakatobi Tomia,28.90,29.10,0.00,0.00,No Stress
+2026-06-20,3,Stasiun Wakatobi Tomia,29.30,29.10,0.20,0.00,Bleaching Watch
+2026-07-10,3,Stasiun Wakatobi Tomia,30.20,29.10,1.10,0.31,Bleaching Warning
+2026-08-01,3,Stasiun Wakatobi Tomia,30.90,29.10,1.80,4.25,Alert Level 1
+2026-08-20,3,Stasiun Wakatobi Tomia,31.20,29.10,2.10,8.15,Alert Level 2
+2026-06-01,4,Stasiun Karimunjawa Menjangan,29.20,29.60,0.00,0.00,No Stress
+2026-06-25,4,Stasiun Karimunjawa Menjangan,29.90,29.60,0.30,0.00,Bleaching Watch
+2026-07-20,4,Stasiun Karimunjawa Menjangan,30.80,29.60,1.20,2.40,Bleaching Warning
+2026-08-15,4,Stasiun Karimunjawa Menjangan,31.40,29.60,1.80,6.00,Alert Level 1
+2026-06-01,5,Stasiun Komodo Padar,28.40,28.80,0.00,0.00,No Stress
+2026-06-30,5,Stasiun Komodo Padar,29.10,28.80,0.30,0.00,Bleaching Watch
+2026-07-25,5,Stasiun Komodo Padar,30.00,28.80,1.20,1.71,Bleaching Warning
+2026-08-20,5,Stasiun Komodo Padar,30.70,28.80,1.90,5.14,Alert Level 1
