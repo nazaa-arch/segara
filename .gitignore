@@ -24,3 +24,7 @@ dashboard/dist/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Firmware (PlatformIO)
+.pio/
+hardware/firmware/gateway/include/secrets.h

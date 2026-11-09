@@ -12,6 +12,8 @@ Dokumen rujukan:
 - [LAPORAN_HASIL_IMPLEMENTASI_SEGARA.md](LAPORAN_HASIL_IMPLEMENTASI_SEGARA.md) — laporan
   hasil implementasi terhadap kriteria rancangan, dengan kolom bukti dan batasan.
 - [docs/methodology.md](docs/methodology.md) — landasan teori, formulasi, aturan QC.
+- [hardware/README.md](hardware/README.md) — **draft** prototipe IoT (ESP32 + LoRa, gateway MQTT,
+  BOM, anggaran energi); belum dirakit maupun di-compile.
 
 ---
 

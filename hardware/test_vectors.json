@@ -1,0 +1,9 @@
+{
+  "_keterangan": "Vektor uji payload 12-byte (>BHhHHHB, big-endian). Dibangkitkan dari simulator/encoder.py. Dipakai oleh tests/test_hardware_payload.py (Python) dan hardware/firmware/node/test/test_payload (C++), sehingga firmware dan backend dijamin memakai format yang sama.",
+  "vectors": [
+    {"node_id": 1,   "counter": 0,     "temperature": 29.20, "ph": 8.05, "salinity": 34.00, "turbidity": 2.5,   "battery": 95,  "hex": "0100000b6803250d4800195f"},
+    {"node_id": 3,   "counter": 65535, "temperature": 31.87, "ph": 7.92, "salinity": 33.45, "turbidity": 12.3,  "battery": 47,  "hex": "03ffff0c7303180d11007b2f"},
+    {"node_id": 255, "counter": 1234,  "temperature": 19.50, "ph": 8.50, "salinity": 37.00, "turbidity": 100.0, "battery": 0,   "hex": "ff04d2079e03520e7403e800"},
+    {"node_id": 2,   "counter": 7,     "temperature": -1.25, "ph": 0.00, "salinity": 0.00,  "turbidity": 0.0,   "battery": 100, "hex": "020007ff8300000000000064"}
+  ]
+}
