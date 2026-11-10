@@ -354,7 +354,7 @@ yang tidak dijalankan.
 | Docker Compose | `infra/docker-compose.yml` ada dan **valid sebagai YAML** | **Docker belum terpasang di host ini; compose belum pernah dijalankan** |
 | Dashboard | `npm run build` sukses (vite 6.4.5, 1591 modul, `dist/assets/index-Fi-FmqXp.js` 349,95 kB); `npx tsc --noEmit` keluar 0 | Hanya diuji build; tidak ada uji UI otomatis |
 | Evaluator | `tests/test_evaluation.py` — 18 pengujian baru | Angka ilmiahnya tetap sintetis |
-| Suite total | `python -m pytest tests/ -q` → **68 passed**, 0 warning | — |
+| Suite total | `python -m pytest tests/ -q` → **82 passed**, 0 warning | — |
 
 Catatan: kriteria "`docker compose up` berhasil" **tidak** terpenuhi. Yang terpenuhi
 adalah "berkas konfigurasi valid sebagai YAML". Keduanya berbeda dan tidak boleh disamakan.
@@ -387,7 +387,7 @@ koordinat, catat tanggal akses, ganti nilai di simulator, lalu ulangi bagian 2 d
 ## 10. Cara mereproduksi
 
 ```powershell
-python -m pytest tests/ -q                     # 68 passed
+python -m pytest tests/ -q                     # 82 passed
 python -c "from api.routers.evaluation import run_packet_loss_monte_carlo as f; import json; print(json.dumps(f(100), indent=1))"
 python -c "from api.routers.evaluation import run_qc_functional_test as f; import json; print(json.dumps(f(), indent=1))"
 python -c "from api.routers.evaluation import run_dhw_algorithmic_verification as f; import json; print(json.dumps(f(), indent=1))"

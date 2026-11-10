@@ -12,6 +12,7 @@ Dokumen rujukan:
 - [LAPORAN_HASIL_IMPLEMENTASI_SEGARA.md](LAPORAN_HASIL_IMPLEMENTASI_SEGARA.md) — laporan
   hasil implementasi terhadap kriteria rancangan, dengan kolom bukti dan batasan.
 - [docs/methodology.md](docs/methodology.md) — landasan teori, formulasi, aturan QC.
+- [docs/brand-guidelines.md](docs/brand-guidelines.md) — logo, palet warna, dan tipografi merek SEGARA.
 - [hardware/README.md](hardware/README.md) — **draft** prototipe IoT (ESP32 + LoRa, gateway MQTT,
   BOM, anggaran energi); belum dirakit maupun di-compile.
 
@@ -33,7 +34,7 @@ Yang **terukur** saat ini:
 | QC | Uji fungsional per aturan (§4 laporan) | **Bukan akurasi lapangan** |
 | Peramalan | **Tidak dievaluasi** — cadence 5 hari membuat horizon runtuh | — |
 | Latensi | Median 5 run: mean 37,83 ms, median 33,56 ms, p95 57,92 ms, p99 329,24 ms | **In-process saja**, DB sementara |
-| Suite tes | **68 passed** | — |
+| Suite tes | **82 passed** | — |
 
 Yang **belum** dijalankan sama sekali: TimescaleDB, broker MQTT nyata, pengiriman Telegram
 ke bot nyata, `docker compose up`, dan validasi terhadap produk CRW resmi.
@@ -181,7 +182,7 @@ SEGARA/
 │   └── Dockerfile
 ├── data/
 │   └── historical_noaa_indonesia.csv # Rekonstruksi, BUKAN unduhan NOAA terverifikasi
-├── tests/                          # 68 tes, 10 berkas + conftest.py
+├── tests/                          # 82 tes, 11 berkas + conftest.py
 │   ├── test_protocol.py
 │   ├── test_qc.py
 │   ├── test_analytics.py
@@ -210,7 +211,7 @@ SEGARA/
 | Docker Compose | `infra/docker-compose.yml` **valid sebagai YAML** | **Docker belum terpasang; compose belum pernah dijalankan** |
 | Dashboard | `npm run build` sukses (vite 6.4.5, 1591 modul, `index-Fi-FmqXp.js` 349,95 kB); `npx tsc --noEmit` keluar 0 | Tidak ada uji UI otomatis |
 | Evaluator | `tests/test_evaluation.py`, 18 tes | Angka ilmiahnya tetap sintetis |
-| Suite total | `python -m pytest tests/ -q` → **68 passed**, 0 warning | — |
+| Suite total | `python -m pytest tests/ -q` → **82 passed**, 0 warning | — |
 
 ---
 
@@ -267,7 +268,7 @@ python run_segara.py
 Pengujian:
 
 ```powershell
-python -m pytest tests/ -q      # 68 passed
+python -m pytest tests/ -q      # 82 passed
 ```
 
 Dashboard build:

@@ -376,8 +376,8 @@ export default function App() {
       const alertLvl = node.latest_thermal?.alert_level || 0;
       let color = '#10b981'; // No stress (hijau status)
       if (alertLvl === 1) color = '#facc15'; // Watch (kuning)
-      if (alertLvl === 2) color = '#FFAA24'; // Warning (Warning Orange brand)
-      if (alertLvl === 3) color = '#F04435'; // Alert 1 (Coral Red brand)
+      if (alertLvl === 2) color = '#FF8A1F'; // Warning (Warning Orange brand)
+      if (alertLvl === 3) color = '#EB505B'; // Alert 1 (Coral Red brand)
       if (alertLvl >= 4) color = '#B3261C'; // Alert 2 (coral gelap)
 
       const isSelected = node.id === selectedNodeId;
@@ -408,7 +408,7 @@ export default function App() {
 
       // Bind Popup Informasi
       const popupContent = `
-        <div style="font-family: Poppins, sans-serif; font-size: 12px; color: #0F2D4A; min-width: 160px;">
+        <div style="font-family: Montserrat, sans-serif; font-size: 12px; color: #0B2A44; min-width: 160px;">
           <b style="font-size: 13px;">${node.name}</b><br/>
           <span style="color: #456C91;">${node.region}</span><br/><hr style="margin: 4px 0; border: 0; border-top: 1px solid #D7E2EE;"/>
           🌡️ SST: <b>${node.latest_thermal?.sst?.toFixed(2) || '-'} °C</b><br/>
@@ -889,7 +889,7 @@ export default function App() {
                             {/* Garis MMM */}
                             <line x1="10" y1={mmmY} x2="590" y2={mmmY} stroke="#10b981" strokeWidth="1.5" strokeDasharray="4" />
                             {/* Garis Bleaching Threshold */}
-                            <line x1="10" y1={threshY} x2="590" y2={threshY} stroke="#F04435" strokeWidth="1.5" strokeDasharray="3" />
+                            <line x1="10" y1={threshY} x2="590" y2={threshY} stroke="#EB505B" strokeWidth="1.5" strokeDasharray="3" />
 
                             {/* Jalur SST */}
                             <polyline
@@ -912,7 +912,7 @@ export default function App() {
                                   cx={x}
                                   cy={y}
                                   r={isHotspot ? 3.5 : 2}
-                                  fill={isHotspot ? '#F04435' : '#45C5E8'}
+                                  fill={isHotspot ? '#EB505B' : '#45C5E8'}
                                 />
                               );
                             })}
@@ -964,8 +964,8 @@ export default function App() {
                         return (
                           <>
                             {/* Garis Alert 1 */}
-                            <line x1="10" y1={alert1Y} x2="590" y2={alert1Y} stroke="#FFAA24" strokeWidth="1" strokeDasharray="3" />
-                            <text x="592" y={alert1Y + 3} fill="#FFAA24" fontSize="9">4.0</text>
+                            <line x1="10" y1={alert1Y} x2="590" y2={alert1Y} stroke="#FF8A1F" strokeWidth="1" strokeDasharray="3" />
+                            <text x="592" y={alert1Y + 3} fill="#FF8A1F" fontSize="9">4.0</text>
                             {/* Garis Alert 2 */}
                             <line x1="10" y1={alert2Y} x2="590" y2={alert2Y} stroke="#B3261C" strokeWidth="1" strokeDasharray="3" />
                             <text x="592" y={alert2Y + 3} fill="#B3261C" fontSize="9">8.0</text>
@@ -978,7 +978,7 @@ export default function App() {
                             {/* Garis Kurva DHW */}
                             <polyline
                               fill="none"
-                              stroke="#FFAA24"
+                              stroke="#FF8A1F"
                               strokeWidth="2.5"
                               points={points}
                             />
